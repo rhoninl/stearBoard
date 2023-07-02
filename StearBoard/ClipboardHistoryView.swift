@@ -17,7 +17,6 @@ struct ClipboardHistoryView: View {
                     .onTapGesture {
                         clipboardHistory.setClipBoard(item)
                     }
-                
                 Divider()
             }
         }
@@ -26,15 +25,15 @@ struct ClipboardHistoryView: View {
     }
 }
 
-struct ClipboardHistoryView_Previews:
-    PreviewProvider {
-    static var previews: some View {
-        let testData = [
-            "123",
-            "test",
-            "this is the thins"
-        ]
-        ClipboardHistoryView()
-            .environmentObject(ClipboardHistory(testData))
-    }
-}
+//struct ClipboardHistoryView_Previews:
+//    PreviewProvider {
+//    static var previews: some View {
+//        let testData = [
+//            "123",
+//            "test",
+//            "this is the thins"
+//        ]
+//        ClipboardHistoryView()
+//            .environmentObject(ClipboardHistory(testData))
+//    }
+//}

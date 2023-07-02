@@ -7,8 +7,9 @@
 import SwiftUI
 import AppKit
 
+
 class ClipboardHistory: ObservableObject {
-    init(_ data: [String]? = nil) {
+    init(_ data: [NSPasteboardItem]? = nil) {
         guard data != nil else {
             return
         }
@@ -16,29 +17,29 @@ class ClipboardHistory: ObservableObject {
         items = data!
     }
     
-    @Published var items: [String] = []
-    @Published var choosedItem = ""
+    @Published var items: [NSPasteboardItem] = []
+    @Published var choosedItem: String = ""
     
     let pasteboard = NSPasteboard.general
-    func setClipBoard(_ data: String) {
+    func setClipBoard(_ data: NSPasteboardItem) {
         pasteboard.clearContents()
-        pasteboard.setString(data, forType: .string)
+        pasteboard.writeObjects([copyPastedItem(data)])
         ChooseItem(data)
     }
     
-    func ChooseItem(_ item: String) {
-        self.choosedItem = item
-    }
-    
-    func GetChoosedItem() -> String {
-        return self.choosedItem
-    }
-    
-    func AddHistory(_ data: String) {
-        if !self.items.contains(data) {
-            self.items.append(data)
+    func ChooseItem(_ item: NSPasteboardItem) {
+        let des = getStringFromItem(item)
+        if self.choosedItem != des {
+            self.choosedItem = des
         }
-        ChooseItem(data)
+    }
+    
+    func AddHistory(_ data: NSPasteboardItem) {
+        let cp = copyPastedItem(data)
+        if !itemsContain(self.items,data) {
+            self.items.append(cp)
+        }
+        ChooseItem(cp)
     }
 }
 
@@ -96,17 +97,45 @@ class StatusBarController {
     @objc func updateClipBoard() {
         if let items = pasteboard.pasteboardItems, items.count > 0 {
             for item in items {
-                for type in item.types {
-                    if type.rawValue == "public.utf8-plain-text" {
-                        if let strValue = item.string(forType: type) {
-                            if !clipboardItems.contains(strValue) {
-                                clipboardItems.append(strValue)
-                                clipboardHistory.AddHistory(strValue)
-                            }
-                        }
-                    }
-                }
+                clipboardHistory.AddHistory(item)
             }
         }
     }
+}
+
+func getStringFromItem(_ input: NSPasteboardItem) -> String {
+    for type in input.types {
+        if type.rawValue == "public.utf8-plain-text" {
+            if let strValue = input.string(forType: type) {
+                return getType(input)+strValue
+            }
+        }
+    }
+    return ""
+}
+
+func copyPastedItem(_ pasteboardItem: NSPasteboardItem) -> NSPasteboardItem {
+    let copiedItem = NSPasteboardItem()
+    for type in pasteboardItem.types {
+        copiedItem.setData(pasteboardItem.data(forType: type)!, forType: type)
+    }
+    return copiedItem
+}
+
+func itemsContain(_ items: [NSPasteboardItem], _ item: NSPasteboardItem) -> Bool {
+    let des = getStringFromItem(item)
+    for existingItem in items {
+        if getStringFromItem(existingItem) == des {
+            return true
+        }
+    }
+    return false
+}
+
+func getType(_ item: NSPasteboardItem) -> String {
+    if item.types.contains(.fileURL) {
+        return "📁: "
+    }
+        
+    return ""
 }
