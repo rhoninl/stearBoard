@@ -37,7 +37,10 @@ class ClipboardHistory: ObservableObject {
     func AddHistory(_ data: NSPasteboardItem) {
         let cp = copyPastedItem(data)
         if !itemsContain(self.items,data) {
-            self.items.append(cp)
+            self.items.insert(cp, at: 0)
+        }
+        if self.items.count >= 30 {
+            self.items = Array(self.items.prefix(30))
         }
         ChooseItem(cp)
     }
@@ -79,7 +82,7 @@ class StatusBarController {
             button.target = self
         }
 
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.updateClipBoard()
         }
     }
@@ -104,6 +107,9 @@ class StatusBarController {
 }
 
 func getStringFromItem(_ input: NSPasteboardItem) -> String {
+    if input.types.contains(.png) {
+        return "picture cannot preview"
+    }
     for type in input.types {
         if type.rawValue == "public.utf8-plain-text" {
             if let strValue = input.string(forType: type) {
@@ -135,7 +141,9 @@ func itemsContain(_ items: [NSPasteboardItem], _ item: NSPasteboardItem) -> Bool
 func getType(_ item: NSPasteboardItem) -> String {
     if item.types.contains(.fileURL) {
         return "📁: "
+    }else if item.types.contains(.png) {
+        return "image cannot preview"
     }
-        
+    
     return ""
 }

@@ -11,17 +11,30 @@ struct ClipboardHistoryView: View {
     @EnvironmentObject var clipboardHistory: ClipboardHistory
     
     var body: some View {
-        ScrollView {
-            ForEach(clipboardHistory.items, id: \.self) { item in
-                ClipboardItem(item, choosed: $clipboardHistory.choosedItem)
-                    .onTapGesture {
-                        clipboardHistory.setClipBoard(item)
-                    }
-                Divider()
+        VStack{
+            HStack{
+                Spacer()
+                Button(action: {
+                    NSApplication.shared.terminate(self)
+                }) {
+                    Text("X")
+                        .font(.title2)
+                }
+                .padding(.trailing,5)
+                .buttonStyle(.plain)
             }
+            ScrollView {
+                ForEach(clipboardHistory.items, id: \.self) { item in
+                    ClipboardItem(item, choosed: $clipboardHistory.choosedItem)
+                        .onTapGesture {
+                            clipboardHistory.setClipBoard(item)
+                        }
+                    Divider()
+                }
+            }
+            .padding([.leading,.trailing],10)
         }
         .frame(maxWidth: 300, maxHeight: 600)
-        .padding()
     }
 }
 
