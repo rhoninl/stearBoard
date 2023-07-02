@@ -13,6 +13,8 @@
 		71D4BDE32A515A620089BEF7 /* StatusItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDE22A515A620089BEF7 /* StatusItemView.swift */; };
 		71D4BDE92A5169790089BEF7 /* ClipboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDE82A5169790089BEF7 /* ClipboardItem.swift */; };
 		71D4BDEB2A516B630089BEF7 /* ClipboardHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDEA2A516B630089BEF7 /* ClipboardHistoryView.swift */; };
+		71D4BDED2A517CAA0089BEF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71D4BDEC2A517CAA0089BEF7 /* README.md */; };
+		71D4BDEF2A517CB00089BEF7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 71D4BDEE2A517CB00089BEF7 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		71D4BDE22A515A620089BEF7 /* StatusItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemView.swift; sourceTree = "<group>"; };
 		71D4BDE82A5169790089BEF7 /* ClipboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItem.swift; sourceTree = "<group>"; };
 		71D4BDEA2A516B630089BEF7 /* ClipboardHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHistoryView.swift; sourceTree = "<group>"; };
+		71D4BDEC2A517CAA0089BEF7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../stearBoard/README.md; sourceTree = "<group>"; };
+		71D4BDEE2A517CB00089BEF7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../stearBoard/LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 		71D4BDC32A5151420089BEF7 = {
 			isa = PBXGroup;
 			children = (
+				71D4BDEE2A517CB00089BEF7 /* LICENSE */,
+				71D4BDEC2A517CAA0089BEF7 /* README.md */,
 				71D4BDCE2A5151420089BEF7 /* StearBoard */,
 				71D4BDCD2A5151420089BEF7 /* Products */,
 			);
@@ -133,7 +139,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D4BDED2A517CAA0089BEF7 /* README.md in Resources */,
 				71D4BDD72A5151430089BEF7 /* Preview Assets.xcassets in Resources */,
+				71D4BDEF2A517CB00089BEF7 /* LICENSE in Resources */,
 				71D4BDD42A5151430089BEF7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +291,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,7 +320,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
