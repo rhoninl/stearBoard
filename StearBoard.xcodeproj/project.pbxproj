@@ -7,27 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71A664ED2A8BC7CD002F0CFC /* StearItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A664EC2A8BC7CD002F0CFC /* StearItem.swift */; };
+		71A664EF2A8BD07B002F0CFC /* StearWindows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A664EE2A8BD07B002F0CFC /* StearWindows.swift */; };
+		71A664F62A8BDCF8002F0CFC /* plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A664F52A8BDCF8002F0CFC /* plist.swift */; };
+		71A664F82A8BEF81002F0CFC /* StearStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A664F72A8BEF81002F0CFC /* StearStatusView.swift */; };
+		71A664FA2A8BF86C002F0CFC /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A664F92A8BF86C002F0CFC /* Recorder.swift */; };
+		71B839CD2A5990ED007F0A4B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 71B839CC2A5990ED007F0A4B /* LICENSE */; };
+		71B839CF2A5990FF007F0A4B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71B839CE2A5990FF007F0A4B /* README.md */; };
+		71B839D12A59912E007F0A4B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B839D02A59912E007F0A4B /* SettingsView.swift */; };
 		71D4BDD02A5151420089BEF7 /* StearBoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDCF2A5151420089BEF7 /* StearBoardApp.swift */; };
 		71D4BDD42A5151430089BEF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D4BDD32A5151430089BEF7 /* Assets.xcassets */; };
 		71D4BDD72A5151430089BEF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D4BDD62A5151430089BEF7 /* Preview Assets.xcassets */; };
-		71D4BDE32A515A620089BEF7 /* StatusItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDE22A515A620089BEF7 /* StatusItemView.swift */; };
+		71D4BDE32A515A620089BEF7 /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDE22A515A620089BEF7 /* Clipboard.swift */; };
 		71D4BDE92A5169790089BEF7 /* ClipboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDE82A5169790089BEF7 /* ClipboardItem.swift */; };
-		71D4BDEB2A516B630089BEF7 /* ClipboardHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D4BDEA2A516B630089BEF7 /* ClipboardHistoryView.swift */; };
-		71D4BDED2A517CAA0089BEF7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71D4BDEC2A517CAA0089BEF7 /* README.md */; };
-		71D4BDEF2A517CB00089BEF7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 71D4BDEE2A517CB00089BEF7 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71A664EC2A8BC7CD002F0CFC /* StearItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StearItem.swift; sourceTree = "<group>"; };
+		71A664EE2A8BD07B002F0CFC /* StearWindows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StearWindows.swift; sourceTree = "<group>"; };
+		71A664F32A8BDB8A002F0CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		71A664F52A8BDCF8002F0CFC /* plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plist.swift; sourceTree = "<group>"; };
+		71A664F72A8BEF81002F0CFC /* StearStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StearStatusView.swift; sourceTree = "<group>"; };
+		71A664F92A8BF86C002F0CFC /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		71B839CC2A5990ED007F0A4B /* LICENSE */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		71B839CE2A5990FF007F0A4B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		71B839D02A59912E007F0A4B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		71D4BDCC2A5151420089BEF7 /* StearBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StearBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D4BDCF2A5151420089BEF7 /* StearBoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StearBoardApp.swift; sourceTree = "<group>"; };
 		71D4BDD32A5151430089BEF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71D4BDD62A5151430089BEF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71D4BDD82A5151430089BEF7 /* StearBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StearBoard.entitlements; sourceTree = "<group>"; };
-		71D4BDE22A515A620089BEF7 /* StatusItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemView.swift; sourceTree = "<group>"; };
+		71D4BDE22A515A620089BEF7 /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		71D4BDE82A5169790089BEF7 /* ClipboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItem.swift; sourceTree = "<group>"; };
-		71D4BDEA2A516B630089BEF7 /* ClipboardHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHistoryView.swift; sourceTree = "<group>"; };
-		71D4BDEC2A517CAA0089BEF7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../stearBoard/README.md; sourceTree = "<group>"; };
-		71D4BDEE2A517CB00089BEF7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../stearBoard/LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,11 +52,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71A664F42A8BDCED002F0CFC /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				71A664F52A8BDCF8002F0CFC /* plist.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		71D4BDC32A5151420089BEF7 = {
 			isa = PBXGroup;
 			children = (
-				71D4BDEE2A517CB00089BEF7 /* LICENSE */,
-				71D4BDEC2A517CAA0089BEF7 /* README.md */,
+				71B839CE2A5990FF007F0A4B /* README.md */,
+				71B839CC2A5990ED007F0A4B /* LICENSE */,
 				71D4BDCE2A5151420089BEF7 /* StearBoard */,
 				71D4BDCD2A5151420089BEF7 /* Products */,
 			);
@@ -62,13 +81,19 @@
 		71D4BDCE2A5151420089BEF7 /* StearBoard */ = {
 			isa = PBXGroup;
 			children = (
+				71A664F42A8BDCED002F0CFC /* utils */,
+				71A664F32A8BDB8A002F0CFC /* Info.plist */,
+				71A664EC2A8BC7CD002F0CFC /* StearItem.swift */,
+				71A664EE2A8BD07B002F0CFC /* StearWindows.swift */,
+				71A664F72A8BEF81002F0CFC /* StearStatusView.swift */,
+				71B839D02A59912E007F0A4B /* SettingsView.swift */,
 				71D4BDE82A5169790089BEF7 /* ClipboardItem.swift */,
-				71D4BDE22A515A620089BEF7 /* StatusItemView.swift */,
-				71D4BDEA2A516B630089BEF7 /* ClipboardHistoryView.swift */,
+				71D4BDE22A515A620089BEF7 /* Clipboard.swift */,
 				71D4BDCF2A5151420089BEF7 /* StearBoardApp.swift */,
 				71D4BDD32A5151430089BEF7 /* Assets.xcassets */,
 				71D4BDD82A5151430089BEF7 /* StearBoard.entitlements */,
 				71D4BDD52A5151430089BEF7 /* Preview Content */,
+				71A664F92A8BF86C002F0CFC /* Recorder.swift */,
 			);
 			path = StearBoard;
 			sourceTree = "<group>";
@@ -139,9 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D4BDED2A517CAA0089BEF7 /* README.md in Resources */,
 				71D4BDD72A5151430089BEF7 /* Preview Assets.xcassets in Resources */,
-				71D4BDEF2A517CB00089BEF7 /* LICENSE in Resources */,
+				71B839CD2A5990ED007F0A4B /* LICENSE in Resources */,
+				71B839CF2A5990FF007F0A4B /* README.md in Resources */,
 				71D4BDD42A5151430089BEF7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,9 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D4BDE32A515A620089BEF7 /* StatusItemView.swift in Sources */,
+				71A664FA2A8BF86C002F0CFC /* Recorder.swift in Sources */,
+				71B839D12A59912E007F0A4B /* SettingsView.swift in Sources */,
+				71D4BDE32A515A620089BEF7 /* Clipboard.swift in Sources */,
+				71A664F62A8BDCF8002F0CFC /* plist.swift in Sources */,
+				71A664F82A8BEF81002F0CFC /* StearStatusView.swift in Sources */,
 				71D4BDD02A5151420089BEF7 /* StearBoardApp.swift in Sources */,
-				71D4BDEB2A516B630089BEF7 /* ClipboardHistoryView.swift in Sources */,
+				71A664EF2A8BD07B002F0CFC /* StearWindows.swift in Sources */,
+				71A664ED2A8BC7CD002F0CFC /* StearItem.swift in Sources */,
 				71D4BDE92A5169790089BEF7 /* ClipboardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +321,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StearBoard/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,6 +351,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StearBoard/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

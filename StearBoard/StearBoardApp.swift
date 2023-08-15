@@ -10,11 +10,12 @@ import SwiftUI
 @main
 struct ClipboardApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-
+    let window = StearWindow()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(appDelegate.clipboardHistory)
+                .environmentObject(appDelegate.stearWindow)
         }
     }
 }

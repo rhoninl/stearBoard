@@ -9,21 +9,19 @@ import SwiftUI
 import AppKit
 
 struct ClipboardItem: View{
-    var item: NSPasteboardItem
+    var item: StearItem
     var choosed: Binding<String>
-    var des: String
     
-    init(_ item: NSPasteboardItem, choosed: Binding<String>) {
+    init(_ item: StearItem, choosed: Binding<String>) {
         self.item = item
         self.choosed = choosed
-        self.des = getStringFromItem(item)
     }
     
     var body: some View {
         HStack{
-            Text(des)
+            Text(item.GetDescription())
             Spacer()
-            if choosed.wrappedValue == des {
+            if choosed.wrappedValue == item.id {
                 Text("✅")
             }
         }
