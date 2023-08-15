@@ -8,14 +8,13 @@ import SwiftUI
 import AppKit
 
 func getStringFromItem(_ input: NSPasteboardItem) -> String {
-    if input.types.contains(.png) {
-        return "picture cannot preview"
-    }
     for type in input.types {
         if type.rawValue == "public.utf8-plain-text" {
             if let strValue = input.string(forType: type) {
                 return getType(input)+strValue
             }
+        } else if input.types.contains(.png) {
+            return "🌄: image cannot preview"
         }
     }
     return ""
@@ -42,8 +41,6 @@ func itemsContain(_ items: [NSPasteboardItem], _ item: NSPasteboardItem) -> Bool
 func getType(_ item: NSPasteboardItem) -> String {
     if item.types.contains(.fileURL) {
         return "📁: "
-    }else if item.types.contains(.png) {
-        return "image cannot preview"
     }
     
     return ""

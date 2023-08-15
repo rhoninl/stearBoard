@@ -29,9 +29,9 @@ struct ClipboardItem: View{
     }
 }
 
-//struct ClipboardItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ClipboardItem(NSPasteboardItem(), choosed: .constant("item"))
-//    }
-//}
+struct ClipboardItem_Previews: PreviewProvider {
+    static var previews: some View {
+        ClipboardItem(StearItem(nil), choosed: .constant("item"))
+    }
+}
 

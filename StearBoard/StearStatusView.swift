@@ -103,5 +103,6 @@ struct StearStatusView: View {
 struct StearStatusView_Previews: PreviewProvider {
     static var previews: some View {
         StearStatusView()
+            .environmentObject(StearWindow())
     }
 }
