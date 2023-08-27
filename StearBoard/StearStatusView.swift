@@ -74,17 +74,18 @@ struct StearStatusView: View {
                     settingsWindowController?.showWindow(nil)
                     NSApplication.shared.activate(ignoringOtherApps: true)
                 }) {
-                    Text("Setting")
+                    Image(systemName: "gear")
                 }
                 Button(action: {
                     NSApplication.shared.terminate(self)
                 }) {
-                    Text("X")
-                        .font(.title2)
+                    Image(systemName: "xmark")
                 }
                 .padding(.trailing,5)
             }
             .buttonStyle(.plain)
+            .font(.title2)
+            .padding([.trailing,.top,.bottom],10)
             ScrollView {
                 ForEach(stears.stears, id: \.self) { item in
                     ClipboardItem(item, choosed: $stears.choosedId)

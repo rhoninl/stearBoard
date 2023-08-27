@@ -20,6 +20,7 @@ struct ClipboardItem: View{
     var body: some View {
         HStack{
             Text(item.GetDescription())
+                .lineLimit(4)
             Spacer()
             if choosed.wrappedValue == item.id {
                 Text("✅")
